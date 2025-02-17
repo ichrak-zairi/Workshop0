@@ -6,14 +6,14 @@
   <div *ngFor="let residence of filterResidences()" class="residence-card">
     <img [src]="residence.image" alt="Residence image">
     <h3>{{ residence.name }}</h3>
-    
-    <button (click)="showLocation(residence)">Show Location</button>
+      <p *ngIf="residence.status === 'Disponible'" class="status available">✅ Disponible</p>
+      <p *ngIf="residence.status === 'En Construction'" class="status construction">🏗️ En Construction</p>
+      <p *ngIf="residence.status === 'Vendu'" class="status sold">❌ Vendu</p>
 
-    <p *ngIf="residence.status === 'Disponible'" class="status available">✅ Disponible</p>
-    <p *ngIf="residence.status === 'En Construction'" class="status construction"> En Construction</p>
-    <p *ngIf="residence.status === 'Vendu'" class="status sold"> Vendu</p>
+ <button (click)="showLocation(residence)">🌍 Voir Localisation</button>
+ <button (click)="addToFavorites(residence)">⭐ Ajouter aux Favoris</button>
+ <a href="#" class="btn btn-primary" routerLink="/details/{{residence.id}}">Details</a>
 
-    <button (click)="addToFavorites(residence)"> Like</button>
   </div>
 </div>
 

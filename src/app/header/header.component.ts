@@ -9,7 +9,7 @@ export class HeaderComponent {
 
   link1:string='Home' ;
   link2:string='Residences' ;
-  url:string='https://esprit.tn/';
+  routerlink='/home';
   linkcolor:string='';
 
   

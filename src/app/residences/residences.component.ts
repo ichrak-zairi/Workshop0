@@ -35,4 +35,22 @@ export class ResidencesComponent {
       residence.address.toLowerCase().includes(this.searchTerm.toLowerCase())
     );
   }
+  // première méthode
+  //addToFavorite1(res: Residence) {
+    //if (this.listFavorite.indexOf(res)==-1) {
+      //this.listFavorite.push(res);
+    //}
+  //}
+
+  // deuxième méthode
+ // addToFavorite2(res: Residence) {
+    // if (this.listFavorite.includes(res)) {
+    //   this.listFavorite.push(res);
+    // }
+  //}
+
+  //filterByAdress(){
+    // this.listFiltred=this.listResidences;
+   // return this.listFiltred=this.listResidences.filter(res=>(res.address.toLowerCase().includes(this.adress.toLowerCase())))
+ // }-->
 }
