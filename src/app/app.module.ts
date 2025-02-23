@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ResidencesComponent } from './residences/residences.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -15,6 +15,7 @@ import { AddResidenceComponent } from './add-residence/add-residence.component';
 import { ApartmentsByResidenceComponent } from './apartments-by-residence/apartments-by-residence.component';
 import { AddApartmentComponent } from './add-apartment/add-apartment.component';
 import { FooterComponent } from './footer/footer.component';
+import { ResidenceFormComponent } from './residence-form/residence-form.component';
 
 @NgModule({
   declarations: [
@@ -30,11 +31,12 @@ import { FooterComponent } from './footer/footer.component';
     ApartmentsByResidenceComponent,
     AddApartmentComponent,
     FooterComponent,
+    ResidenceFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
