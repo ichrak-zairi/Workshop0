@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-apartment',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-apartment.component.css']
 })
 export class AddApartmentComponent {
+  constructor(private fb: FormBuilder) {}
+
+ aprtForm=this.fb.group({
+ apartementNumber: ['',Validators.required],
+ }) ;
 
 }
